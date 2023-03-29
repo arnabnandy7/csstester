@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>CSS Dynamic Page</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
 <style>
 .css_div,#css_div {
   width: 300px;
@@ -26,14 +34,18 @@ function changeCssOfDiv(type1){
 <body>
 
 <h2>The CSS Testing</h2>
-
-  Enter CSS: <textarea type="textarea" name="css_inp" id="css_inp" rows="4" cols="50">
-  </textarea>
-<input type="submit" name="sbm_css_inp" id="sbm_css_inp" value="Submit" onclick="changeCssOfDiv('set')"/>
-<input type="submit" name="rst_css_inp" id="rst_css_inp" value="Reset" onclick="changeCssOfDiv('reset')"/>
-
 <p>The CSS here will be help you to understand and playaround to know how it works.</p>
-<div name="css_div" id="css_div">This text is the content of the box.</div>
+<div class="row">
+  <div class="col-sm-4"><label for="css_inp">Enter CSS:</label><textarea class="form-control" style="resize:none;overflow-y: scroll;" name="css_inp" id="css_inp" rows="20" cols="50" placeholder="transform:rotate(45deg)"></textarea></div>
+  
+  <div class="col-sm-8"><div name="css_div" id="css_div">This text is the content of the box.</div></div>
+</div>
+<div class="row">
+<br>
+<div class="col-sm-4"><button type="button" class="btn btn-primary" onclick="changeCssOfDiv('set')">Submit</button>
+			<button type="button" class="btn btn-primary" onclick="changeCssOfDiv('reset')">Reset</button></div>
+</div>
+
 
 
 </body>
