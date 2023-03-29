@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.css_div,#css_div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+</style>
+
+<script type="text/javascript">
+function changeCssOfDiv(type1){
+	defaultCss='width: 300px;border: 15px solid green;padding: 50px;margin: 20px;';
+
+	css_div = document.getElementById("css_div");
+	result=type1.toUpperCase() === 'set'.toUpperCase();
+	if(result)
+		css_div.style=document.getElementById("css_inp").value;
+	else
+		css_div.style=defaultCss;
+};
+</script>
+</head>
+<body>
+
+<h2>The CSS Testing</h2>
+
+  Enter CSS: <textarea type="textarea" name="css_inp" id="css_inp" rows="4" cols="50">
+  </textarea>
+<input type="submit" name="sbm_css_inp" id="sbm_css_inp" value="Submit" onclick="changeCssOfDiv('set')"/>
+<input type="submit" name="rst_css_inp" id="rst_css_inp" value="Reset" onclick="changeCssOfDiv('reset')"/>
+
+<p>The CSS here will be help you to understand and playaround to know how it works.</p>
+<div name="css_div" id="css_div">This text is the content of the box.</div>
+
+
+</body>
+</html>
+
+
